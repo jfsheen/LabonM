@@ -1,8 +1,6 @@
 package net.emole.service.person;
 
-import net.emole.model.person.Person;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import net.emole.model.member.Person;
 
 import java.util.List;
 
@@ -12,7 +10,7 @@ import java.util.List;
 
 
 public interface PersonService {
-    Page<Person> findByName(String name);
+    Person findByName(String name);
     List<Person> findAll();
     Person findById(Long id);
 

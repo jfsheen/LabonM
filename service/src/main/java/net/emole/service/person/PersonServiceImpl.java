@@ -2,12 +2,11 @@ package net.emole.service.person;
 
 import com.google.common.collect.Lists;
 import net.emole.dao.person.PersonRepository;
-import net.emole.model.person.Person;
+import net.emole.model.member.Person;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -16,7 +15,7 @@ import java.util.List;
  * Created by sjf on 15-8-31.
  */
 
-@Service("personService")
+@Component("personService")
 @Transactional
 public class PersonServiceImpl implements PersonService{
 
@@ -24,7 +23,7 @@ public class PersonServiceImpl implements PersonService{
     private PersonRepository personRepository;
 
     @Override
-    public Page<Person> findByName(String name) {
+    public Person findByName(String name) {
         return personRepository.findByName(name);
     }
 
