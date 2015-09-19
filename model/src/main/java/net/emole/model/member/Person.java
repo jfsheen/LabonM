@@ -20,6 +20,8 @@ public class Person extends BaseEntity {
     @Column
     private String name;
     @Column
+    private String idNum;
+    @Column
     private Gender gender;
     @Column
     private Date birthday;

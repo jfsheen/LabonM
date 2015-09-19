@@ -1,7 +1,7 @@
 package net.emole.model.literature.business;
 
 import net.emole.model.literature.Literature;
-import net.emole.model.commons.constant.PersonRole;
+import net.emole.model.commons.constant.LiteratureRole;
 import net.emole.model.base.BaseEntity;
 import net.emole.model.member.Person;
 
@@ -17,7 +17,7 @@ public class LiteratureRecord extends BaseEntity{
     @Column
     private Person person;
     @Column
-    private PersonRole personRole;
+    private LiteratureRole literatureRole;
  /*   @Column
     private */
 }
